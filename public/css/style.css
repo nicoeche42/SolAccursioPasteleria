@@ -1,0 +1,242 @@
+/* ----- imports ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hubballi&display=swap');
+
+/* ----- variables -----*/ 
+
+:root{
+    --principal:  rgb(87, 37, 2);
+    --secondary: aqua; 
+    --font-primary: "Bebas Neue";
+    --font-secondary: "Hubballi";
+    --text-lg: 2em;
+    --text-md: 1.6em;
+}
+
+/* ----- resert ----- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}       
+/* ----- globals ----- */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--secondary)
+}
+h1{
+    font-size: 5em;
+}
+p{
+    font-size: 2em;
+}
+ul {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+/* ----- helpers ----- */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/* ----- body ----- */
+#bodyIndex {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15vh 1fr 15vh;
+    grid-template-areas: 
+    "header header header header"
+    "mainIndex mainIndex mainIndex mainIndex"
+    "footer footer footer footer";
+}
+#bodyGaleria { 
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15vh 1fr 15vh;
+    grid-template-areas: 
+    "header header header header"
+    "mainGaleria mainGaleria mainGaleria mainGaleria"
+    "footer footer footer footer";
+}
+
+/* ----- header ----- */
+header {
+    grid-area: header;
+    grid-column: 1/5;
+    grid-row:1;  
+    background-image: linear-gradient(rgb(53, 22, 0),rgb(87, 37, 2));
+    text-align: center;
+}
+header .navbar {
+    min-height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header .logo {
+    flex-basis: 30%;
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+
+}
+
+header .menu {
+    flex-basis: 40%;
+    justify-content: space-between;
+
+}
+
+header .menu__item {
+    border: 2px solid var(--principal);
+
+}
+
+.menu .menu__item:hover {
+    border: 2px solid var(--secondary);
+}
+
+.menu .menu__item .menu_link {
+    font-size: var(--text-md);
+    padding: 1rem;
+}
+
+
+
+/* ----- main ----- */
+#mainIndex {
+    grid-area: mainIndex;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "sectionOne sectionTwo";
+    grid-column-gap: 1rem;
+    justify-items: center;
+}
+.sectionOne {
+    grid-area: sectionOne;
+    grid-column: 1;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    background-color: rgb(87, 37, 2);
+    color: aqua;
+}
+section article {
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+}
+section div {
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.tituloPrincipal {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(87, 37, 2);
+    background-color: aqua;
+    margin-right: 5%;
+    margin-left:5%
+}
+.textoPrincipal {
+    text-align: left;
+    padding-top: 20px;
+}
+.sectionTwo {
+    grid-area: sectionTwo;
+    grid-column: 2;
+    width: 60%;
+    height: 60%;
+
+}
+.alfajoresIndex{
+    height: 100%;
+    width: 100%;
+}
+/* ----- main galeria ----- */
+#mainGaleria{
+    grid-area: mainGaleria;
+} 
+.fotosGaleria {
+    margin-left: 10%;
+    margin-right: 10%;
+    width:100%;
+    column-count: 2;
+}
+
+/* ----- footer ----- */
+footer {
+    background-image: linear-gradient(rgb(87, 37, 2), rgb(53, 22, 0));
+    grid-area: footer;
+    width: 100vw;    
+}
+
+.copyright {
+    text-align: left;
+    color: rgb(160, 16, 16);
+    font-family: Times;
+    font-style: italic;
+}
+.redes {
+    position: relative;
+    text-align: right;
+    color: aqua;
+    font-family:fantasy;
+}
+@media screen and (max-width:375px){
+    .fotosGaleria{
+        column-count: 1;
+        margin:0;
+    }   
+    #mainIndex{
+        display: inline-block;  
+    }
+    .sectionTwo {
+        height: auto;
+        width: auto;   
+    }
+    .sectionOne{
+        height: 1fr;
+        width: auto; 
+    }
+    header{
+        width: 100%;
+    }
+
+}
