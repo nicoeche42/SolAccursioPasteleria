@@ -82,7 +82,9 @@ a {
     "mainGaleria mainGaleria mainGaleria mainGaleria"
     "footer footer footer footer";
 }
-
+body{
+    color: var(--secondary)
+}
 /* ----- header ----- */
 header {
     grid-area: header;
@@ -235,10 +237,11 @@ main div img:hover {
     .fotosGaleria{
         column-count: 1;
         margin:0;
-    }   
-    #mainIndex{
+        }
+    }      
+    /*#mainIndex{
         display: inline-block;  
-    }
+    }*/
     .sectionTwo {
         height: auto;
         width: auto;   
@@ -250,5 +253,9 @@ main div img:hover {
     header{
         width: 100%;
     }
+    .imagenProductos{
+        max-width: 500px;
+        max-height: 500px;
 
-}
+
+    }
