@@ -1,0 +1,35 @@
+/* ----- resert ----- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}       
+
+/* ----- globals ----- */
+
+html {
+    font-size: 62.5%;
+    font-family: var($font-primary);
+    color: var($secondary)
+}
+body{
+    color: var($secondary)
+}
+h1{
+    font-size: 5em;
+}
+p{
+    font-size: 2em;
+}
+ul {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}

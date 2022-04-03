@@ -1,0 +1,16 @@
+/* ----- imports ----- */
+/* MICELANEOUS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hubballi&display=swap');
+@import './misc/variables';
+@import './misc/normalize';
+@import './misc/mixins';
+@import './misc/normalize';
+/* PARTIALS */
+@import './partials/header';
+@import './partials/footer';
+/* VIEWS */
+@import './views/home';
+@import './views/contacto';
+@import './views/galeria';
+@import './views/nosotros';
+@import './views/productos';

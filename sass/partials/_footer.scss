@@ -1,0 +1,17 @@
+footer {
+    background-image: linear-gradient(rgb(87, 37, 2), rgb(53, 22, 0));
+    grid-area: footer;
+    width: 100vw;    
+}
+.copyright {
+    text-align: left;
+    color: rgb(160, 16, 16);
+    font-family: Times;
+    font-style: italic;
+}
+.redes {
+    position: relative;
+    text-align: right;
+    color: aqua;
+    font-family:fantasy;
+}

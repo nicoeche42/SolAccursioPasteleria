@@ -1,0 +1,28 @@
+#bodyGaleria {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15vh 1fr 15vh;
+    grid-template-areas:
+        "header header header header"
+        "mainGaleria mainGaleria mainGaleria mainGaleria"
+        "footer footer footer footer";
+}
+
+#mainGaleria {
+    grid-area: mainGaleria;
+}
+
+.fotosGaleria {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100%;
+    column-count: 2;
+}
+
+@media screen and (max-width:375px) {
+    .fotosGaleria {
+        column-count: 1;
+        margin: 0;
+    }
+}
