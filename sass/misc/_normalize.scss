@@ -1,5 +1,4 @@
 /* ----- resert ----- */
-
 *,
 *::before,
 *::after {
@@ -7,16 +6,14 @@
     padding: 0;
     box-sizing: border-box; 
 }       
-
 /* ----- globals ----- */
-
 html {
     font-size: 62.5%;
-    font-family: var($font-primary);
-    color: var($secondary)
+    font-family: var(--font-primary);
+    color: var(--secondary)
 }
 body{
-    color: var($secondary)
+    color: var(--secondary)
 }
 h1{
     font-size: 5em;

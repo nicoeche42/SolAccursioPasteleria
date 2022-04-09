@@ -1,11 +1,11 @@
 {
-  "name": "Proyecto",
+  "name": "proyecto",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass": "node-sass --include-patch scss sass/style.scss css/main.css",
-    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+    "build-sass": "node-sass --include-path scss sass/style.scss css/main.css"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,6 @@
   },
   "homepage": "https://github.com/nicoeche42/SolAccursioPasteleria#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
-  },
-  "dependencies": {},
-  "description": ""
+    "node-sass": "^7.0.1"
+  }
 }

@@ -1,12 +1,10 @@
 .btn-primary {
-    background-color: var($principal);
-    color: var($secondary);
+    background-color: var(principal);
+    color: var(secondary);
 }
-
 .card-title {
-    font-size: var($text-lg);
+    font-size: var(--text-lg);
 }
-
 .card-text {
     font-size: var(--text-md);
 }
