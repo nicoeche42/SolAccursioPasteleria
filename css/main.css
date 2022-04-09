@@ -80,9 +80,16 @@ header {
 
 .menu {
   flex-basis: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   justify-content: space-between; }
-  .menu__item {
+  .menu__item, .menu__item--active {
     border: 2px solid var(--principal); }
+    .menu__item--active {
+      background-color: aqua; }
   .menu:hover {
     border: 2px solid var(--secondary); }
   .menu .menu__link {
@@ -183,6 +190,9 @@ section div {
     height: 1fr;
     width: auto; } }
 
+main .formContacto {
+  padding: 2rem; }
+
 #bodyGaleria {
   display: grid;
   min-height: 100vh;
@@ -215,8 +225,8 @@ section div {
   margin: auto; }
 
 .btn-primary {
-  background-color: var(principal);
-  color: var(secondary); }
+  background-color: #572502;
+  color: aqua; }
 
 .card-title {
   font-size: var(--text-lg); }

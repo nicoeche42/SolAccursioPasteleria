@@ -1,6 +1,6 @@
 .btn-primary {
-    background-color: var(principal);
-    color: var(secondary);
+    background-color: $principal;
+    color: $secondary;
 }
 .card-title {
     font-size: var(--text-lg);

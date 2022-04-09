@@ -1,3 +1,11 @@
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $gap: o) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
 .flex-row {
     display: flex;
 }

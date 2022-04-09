@@ -19,10 +19,17 @@ header {
     }
     .menu {
         flex-basis: 40%;
+        @include flex($justify: space-between, $align: center, $gap: 2rem);
         justify-content: space-between;
 
         &__item {
             border: 2px solid var(--principal);
+        
+            &--active {
+                @extend .menu__item;
+                background-color: aqua;
+
+            }
         }
         &:hover {
             border: 2px solid var(--secondary);
