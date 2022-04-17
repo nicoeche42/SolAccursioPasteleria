@@ -11,15 +11,10 @@
 #mainGaleria {
     grid-area: mainGaleria;
 }
+
 .fotosGaleria {
     margin-left: 10%;
     margin-right: 10%;
     width: 100%;
     column-count: 2;
-}
-@media screen and (max-width:375px) {
-    .fotosGaleria {
-        column-count: 1;
-        margin: 0;
-    }
 }
