@@ -1,10 +1,14 @@
-.btn-primary {
-    background-color: $principal;
-    color: $secondary;
-}
-.card-title {
-    font-size: var(--text-lg);
-}
-.card-text {
-    font-size: var(--text-md);
+.card {
+    width: 20rem;
+    overflow: hidden;
+    .btn-primary {
+        background-color: $principal;
+        color: $secondary;
+    }
+    .card-title {
+        font-size: $text-lg;
+    }
+    .card-text {
+        font-size: $text-md;
+    }
 }

@@ -9,11 +9,11 @@
 /* ----- globals ----- */
 html {
     font-size: 62.5%;
-    font-family: var(--font-primary);
-    color: var(--secondary)
+    font-family: $font-primary;
+    color: $secondary;
 }
 body{
-    color: var(--secondary)
+    color: $secondary;
 }
 h1{
     font-size: 5em;
@@ -30,4 +30,7 @@ a {
     color: inherit;
     display: inline-block;
 }
-
+main{
+    background-image: url(../public/image/fondoTortas.jpg);
+    background-size: cover;
+}

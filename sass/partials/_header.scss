@@ -1,41 +1,65 @@
 header {
     grid-area: header;
-    grid-column: 1/5;
+    grid-column: 1;
     grid-row: 1;
-    background-image: linear-gradient(rgb(53, 22, 0), rgb(87, 37, 2));
+    background-color: $principal;
     text-align: center;
+    color: white;
 }
-    .navbar {
-        min-height: 10vh;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 2rem;
-    }
-    .logo {
-        flex-basis: 30%;
-        position: relative;
-        display: inline-block;
-        margin-top: 5px;
-    }
-    .menu {
-        flex-basis: 40%;
-        @include flex($justify: space-between, $align: center, $gap: 2rem);
-        justify-content: space-between;
 
-        &__item {
-            border: 2px solid var(--principal);
-        
-            &--active {
-                @extend .menu__item;
-                background-color: aqua;
+.navbar {
+    min-height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+}
 
-            }
+.logo {
+    flex-basis: 30%;
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.menu {
+    flex-basis: 40%;
+    @include flex($justify: space-between, $align: center, $gap: 2rem);
+    justify-content: space-between;
+
+
+
+    &Item {
+        border: none;
+
+        &--active {
+            @extend .menuItem;
+            background-color: white;
+            color: chocolate;
         }
+    }
+
+    .menuLink {
+        font-size: $text-sm;
+        padding: 1rem;
+
         &:hover {
-            border: 2px solid var(--secondary);
-        }
-        .menu__link {
-            font-size: var(--text-md);
-            padding: 1rem;
+            border: $secondary;
+            color: white;
+            background-color: chocolate;
         }
     }
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}

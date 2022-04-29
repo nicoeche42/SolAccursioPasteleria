@@ -1,5 +1,32 @@
-main{
+#mainContacto {
+  background-image: url(../public/image/fondoTortas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 400;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 0;
+  .divContacto{
+    margin: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: $principal;
+    padding: 5%;
+    box-shadow: 7px 13px 37px #000;
+    width: 50%;
+  }
     .formContacto {
-          padding: map-get($margins, medium )  
+      padding: map-get($margins, medium);
+      .margenesContacto {
+        margin-right: 80%;
+      }
+
     }
+
+    form textarea {
+      width: 100%;
+    }
+  
+
+
 }
