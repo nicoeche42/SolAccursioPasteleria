@@ -5,6 +5,7 @@ header {
     background-color: $principal;
     text-align: center;
     color: white;
+    font-family: cursive,Arial;
 }
 
 .navbar {
@@ -33,19 +34,19 @@ header {
 
         &--active {
             @extend .menuItem;
-            background-color: white;
-            color: chocolate;
+            background-color: $secondary;
+            text-shadow: black 0.1em 0.1em 0.2em;
         }
     }
 
     .menuLink {
         font-size: $text-sm;
-        padding: 1rem;
+        padding: 0.3rem;
 
         &:hover {
-            border: $secondary;
             color: white;
-            background-color: chocolate;
+            background-color: $secondary;
+            text-shadow: black 0.1em 0.1em 0.2em;
         }
     }
 }

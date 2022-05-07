@@ -13,7 +13,7 @@
 /* ----- globals ----- */
 html {
   font-size: 62.5%;
-  font-family: "Bebas Neue";
+  font-family: cursive, Arial;
   color: #ffccd2; }
 
 body {
@@ -35,8 +35,8 @@ a {
   display: inline-block; }
 
 main {
-  background-image: url(../public/image/fondoTortas.jpg);
-  background-size: cover; }
+  background-image: url(../public/image/fondoSol5.png);
+  background-repeat: repeat; }
 
 @keyframes rotalogo {
   from {
@@ -59,7 +59,8 @@ header {
   grid-row: 1;
   background-color: #582805;
   text-align: center;
-  color: white; }
+  color: white;
+  font-family: cursive,Arial; }
 
 .navbar {
   min-height: 10vh;
@@ -84,15 +85,15 @@ header {
   .menuItem, .menuItem--active {
     border: none; }
     .menuItem--active {
-      background-color: white;
-      color: chocolate; }
+      background-color: #ffccd2;
+      text-shadow: black 0.1em 0.1em 0.2em; }
   .menu .menuLink {
     font-size: 1em;
-    padding: 1rem; }
+    padding: 0.3rem; }
     .menu .menuLink:hover {
-      border: #ffccd2;
       color: white;
-      background-color: chocolate; }
+      background-color: #ffccd2;
+      text-shadow: black 0.1em 0.1em 0.2em; }
 
 .flex-row {
   display: flex; }
@@ -122,7 +123,7 @@ footer {
   text-align: right;
   background-color: transparent;
   margin-right: 5%;
-  padding-top: 5%; }
+  /*padding-top: 5%;*/ }
 
 .copyright {
   margin-bottom: 0; }
@@ -133,16 +134,17 @@ footer {
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 15vh 1fr 15vh;
-  grid-template-areas: "header"  "mainIndex" "footer"; }
+  grid-template-areas: "header" "mainIndex" "footer"; }
+  #bodyIndex header {
+    grid-area: header; }
+  #bodyIndex footer {
+    grid-area: footer; }
 
 #mainIndex {
   grid-area: mainIndex;
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background-image: url(../public/image/portada.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   justify-content: center;
   align-items: center;
   grid-template-columns: 100%;
@@ -150,15 +152,34 @@ footer {
   grid-template-areas: "sectionOne";
   grid-column-gap: 1rem;
   justify-items: center; }
+  #mainIndex .home {
+    font-family: cursive; }
+    #mainIndex .home h1 {
+      font-family: "Indie Flower", cursive;
+      background-color: #582805;
+      text-align: center;
+      font-weight: 300;
+      padding-top: 5%;
+      color: beige;
+      align-content: center; }
+    #mainIndex .home .carousel {
+      box-shadow: 7px 13px 37px #000000; }
+      #mainIndex .home .carousel .carousel-item {
+        transform: none;
+        transition: none; }
+        #mainIndex .home .carousel .carousel-item .imgCarousel {
+          transform: none; }
 
 #mainContacto {
-  background-image: url(../public/image/fondoTortas.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: cursive, Arial;
   color: white;
   font-weight: 400;
   text-shadow: black 0.1em 0.1em 0.2em;
   margin: 0; }
+  #mainContacto button, #mainContacto input, #mainContacto optgroup, #mainContacto select, #mainContacto textarea {
+    background-color: #ffccd2; }
+  #mainContacto form textarea, #mainContacto input {
+    width: 100%; }
   #mainContacto .divContacto {
     margin: 5%;
     margin-left: 25%;
@@ -171,8 +192,6 @@ footer {
     padding: 2rem; }
     #mainContacto .formContacto .margenesContacto {
       margin-right: 80%; }
-  #mainContacto form textarea {
-    width: 100%; }
 
 .galeria {
   font-family: cursive; }
@@ -180,7 +199,18 @@ footer {
     text-align: center;
     font-weight: 300;
     padding-top: 5%;
-    color: #000; }
+    color: #000;
+    align-content: center; }
+  .galeria .banner {
+    width: 100%;
+    align-content: center;
+    align-items: center; }
+    .galeria .banner .imgBanner {
+      width: 100%; }
+      .galeria .banner .imgBanner .imgBannerSol {
+        width: 90%;
+        margin: 5% 5% 0% 5%;
+        transform: none; }
   .galeria .lineaGaleria {
     border-top: 5px solid black;
     width: 90%;
@@ -213,66 +243,59 @@ footer {
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 15vh 1fr 15vh;
-  grid-template-areas: "header"  "mainNosotros" "footer"; }
+  grid-template-areas: "header" "mainNosotros" "footer"; }
 
 #mainNosotros {
   grid-area: mainNosotros;
   display: grid;
   height: 100vh;
   width: 100%;
-  background-image: url(../public/image/portadaMadera.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   justify-content: center;
   align-items: center;
   grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 0.5fr 0.5fr;
   grid-template-areas: "sectionOne" "sectiontwo";
   grid-column-gap: 1rem;
   justify-items: center; }
 
 .sectionOne {
+  margin-top: 10%;
   grid-area: sectionOne;
   grid-column: 1;
   grid-row: 1;
   position: relative;
   width: 80%;
-  height: 80%;
+  height: 100%;
   background-color: #582805;
   color: white;
   font-weight: 400;
   text-shadow: black 0.1em 0.1em 0.2em;
   box-shadow: 7px 13px 37px #000; }
+  .sectionOne .tituloPrincipal {
+    text-align: center;
+    font-family: cursive, Arial;
+    color: white;
+    background-color: #ffccd2;
+    margin-right: 5%;
+    margin-left: 5%; }
+  .sectionOne .textoPrincipal {
+    text-align: left;
+    padding: 20px;
+    font-family: "Indie Flower", cursive; }
 
 .sectionTwo {
   grid-area: sectionTwo;
   grid-column: 1;
   grid-row: 2;
-  position: relative;
   width: 80%;
-  display: grid;
-  align-content: space-between;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: "imgPast2 imgManga" "imgPast3 imgPast4"; }
-
-.imgNosotros {
-  display: contents;
-  width: 100%;
-  margin: auto;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border-radius: 3px; }
-  .imgNosotros .imgTodasNos {
-    width: 25%;
-    position: relative;
-    margin-bottom: 5%;
-    box-shadow: 7px 13px 37px #000;
-    overflow: hidden; }
-    .imgNosotros .imgTodasNos img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+  color: #ffccd2;
+  background-color: #582805;
+  margin-top: 10%; }
+  .sectionTwo .textoSecundario {
+    text-align: left;
+    padding: 20px;
+    font-family: "Indie Flower", cursive;
+    color: white; }
 
 section article {
   display: inline-block;
@@ -284,45 +307,15 @@ section div {
   text-align: right;
   margin-right: 10px; }
 
-.tituloPrincipal {
-  text-align: center;
-  font-family: cursive,Arial, Helvetica, sans-serif;
-  color: white;
-  background-color: #ffccd2;
-  margin-right: 5%;
-  margin-left: 5%; }
-
-.textoPrincipal {
-  text-align: left;
-  padding: 20px;
-  font-family: 'Indie Flower', cursive; }
-
-#imgpast2 {
-  grid-area: imgpast2;
-  grid-column: 1;
-  grid-row: 1; }
-
-#imgManga {
-  grid-area: imgManga;
-  grid-column: 2;
-  grid-row: 1; }
-
-#imgPast3 {
-  grid-area: imgPast3;
-  grid-column: 1;
-  grid-row: 2; }
-
-#imgPast4 {
-  grid-area: imgpast4;
-  grid-column: 2;
-  grid-row: 2; }
-
 .card {
+  background-color: #582805;
+  color: white;
   width: 20rem;
-  overflow: hidden; }
+  overflow: hidden;
+  text-shadow: black 0.1em 0.1em 0.2em; }
   .card .btn-primary {
-    background-color: #582805;
-    color: #ffccd2; }
+    background-color: #ffccd2;
+    color: white; }
   .card .card-title {
     font-size: 2em; }
   .card .card-text {
@@ -333,6 +326,17 @@ section div {
 @media screen and (max-width: 760PX) {
   p {
     font-size: medium; }
+  #bodyIndex {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23vh 1fr 15vh;
+    grid-template-areas: "header" "mainIndex" "footer"; }
+  #bodyGaleria {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 23vh 1fr 30vh;
+    grid-template-areas: "header" "main" "footer"; }
   .tituloPrincipal {
     font-size: 3em; }
   .fotosGaleria {
@@ -345,15 +349,6 @@ section div {
       .fotosGaleria .imgTodasGal img {
         width: 100%;
         height: 100%;
-        object-fit: cover; }
-  .imgNosotros {
-    column-count: 1; }
-    .imgNosotros .imgTodasNos {
-      width: 48%;
-      position: relative;
-      margin-bottom: 5px; }
-      .imgNosotros .imgTodasNos img {
-        width: 100%;
         object-fit: cover; } }
 
 /*PANTALLAS CHICAS*/
@@ -366,12 +361,14 @@ section div {
     margin: 0;
     padding: 0; }
     header .navbar {
-      width: 60%; }
+      width: 60%;
+      padding: 0; }
       header .navbar .menu {
+        margin-top: 5%;
         align-content: space-between;
         gap: 0; }
       header .navbar ul {
-        font-size: xx-small; }
+        font-size: small; }
   .fotosGaleria {
     column-count: 1; }
     .fotosGaleria .imgTodasGal {
@@ -384,11 +381,11 @@ section div {
       height: 100%;
       object-fit: cover; }
   p {
-    font-size: small; }
+    font-size: 1.5em; }
   #bodyIndex {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 30vh 1fr 30vh;
+    grid-template-rows: 23vh 1fr 30vh;
     grid-template-areas: "header" "main" "footer"; }
     #bodyIndex #mainIndex {
       grid-area: main; }
@@ -399,7 +396,7 @@ section div {
   #bodyGaleria {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 30vh 1fr 30vh;
+    grid-template-rows: 23vh 1fr 30vh;
     grid-template-areas: "header" "main" "footer"; }
     #bodyGaleria #mainGaleria {
       grid-area: main; }

@@ -1,22 +1,27 @@
-
 #bodyIndex {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 15vh 1fr 15vh;
     grid-template-areas:
-        "header" 
+        "header"
         "mainIndex"
         "footer";
+
+    header {
+        grid-area: header;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }
+
 #mainIndex {
     grid-area: mainIndex;
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background-image: url(../public/image/portada.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     justify-content: center;
     align-items: center;
     grid-template-columns: 100%;
@@ -25,6 +30,32 @@
         "sectionOne";
     grid-column-gap: 1rem;
     justify-items: center;
+
+    .home {
+        font-family: cursive;
+
+        h1 {
+            font-family: $font-secondary;
+            background-color: $principal;
+            text-align: center;
+            font-weight: 300;
+            padding-top: 5%;
+            color: beige;
+            align-content: center;
+        }
+
+        .carousel {
+            box-shadow: 7px 13px 37px #000000;
+
+            .carousel-item {
+                transform: none;
+                transition: none;
+
+                .imgCarousel {
+                    transform: none;
+                }
+            }
+        }
+
+    }
 }
-
-

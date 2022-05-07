@@ -1,9 +1,12 @@
 .card {
+    background-color: $principal;
+    color: white;
     width: 20rem;
     overflow: hidden;
+    text-shadow: black 0.1em 0.1em 0.2em;
     .btn-primary {
-        background-color: $principal;
-        color: $secondary;
+        background-color: $secondary;
+        color: white;
     }
     .card-title {
         font-size: $text-lg;

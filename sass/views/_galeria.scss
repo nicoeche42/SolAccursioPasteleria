@@ -5,6 +5,20 @@
         font-weight: 300;
         padding-top: 5%;
         color: #000;
+        align-content: center;
+    }
+    .banner {
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        .imgBanner {
+            width: 100%;
+            .imgBannerSol {
+                width: 90%;
+                margin: 5% 5% 0% 5%;        
+                transform: none;
+            }
+        }
     }
     .lineaGaleria {
         border-top: 5px solid black;

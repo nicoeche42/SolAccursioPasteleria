@@ -3,7 +3,25 @@
     p {
         font-size: medium;
     }
-
+    #bodyIndex {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 23vh 1fr 15vh;
+        grid-template-areas:
+            "header"
+            "mainIndex"
+            "footer";
+    }    
+    #bodyGaleria {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 23vh 1fr 30vh;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
     .tituloPrincipal {
         font-size: 3em;
     }
@@ -24,18 +42,8 @@
             }
         }
     }
-    .imgNosotros {
-        column-count: 1;
-        .imgTodasNos{
-            width: 48%;
-            position: relative;
-            margin-bottom: 5px;
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
+    
+    
 }
 
 /*PANTALLAS CHICAS*/
@@ -52,14 +60,16 @@
 
         .navbar {
             width: 60%;
+            padding: 0;
 
             .menu {
+                margin-top: 5%;
                 align-content: space-between;
                 gap: 0;
             }
 
             ul {
-                font-size: xx-small;
+                font-size: small;
             }
         }
     }
@@ -82,13 +92,13 @@
     }
 
     p {
-        font-size: small;
+        font-size: 1.5em;
     }
 
     #bodyIndex {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 30vh 1fr 30vh;
+        grid-template-rows: 23vh 1fr 30vh;
         grid-template-areas:
             "header"
             "main"
@@ -110,7 +120,7 @@
     #bodyGaleria {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 30vh 1fr 30vh;
+        grid-template-rows: 23vh 1fr 30vh;
         grid-template-areas:
             "header"
             "main"
