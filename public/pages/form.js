@@ -1,6 +1,6 @@
-const form = document.querySelector('#form')
+const $form = document.querySelector('#form')
 
-form.addEventListener('submit', handleSubmit)
+$form.addEventListener('submit', handleSubmit)
 
 async function handleSubmit(event){
     event.preventDefault()
