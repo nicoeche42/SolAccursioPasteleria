@@ -5,8 +5,9 @@
     overflow: hidden;
     text-shadow: black 0.1em 0.1em 0.2em;
     .btn-primary {
-        background-color: $secondary;
+        background-color: green;
         color: white;
+        border-color: green;
     }
     .card-title {
         font-size: $text-lg;
@@ -15,3 +16,19 @@
         font-size: $text-md;
     }
 }
+.cards {
+    width: auto;
+}
+#carro {
+    max-width: 60%;
+    background-color: $principal;
+    color: white;
+    th{
+        color: white;
+    }
+    .table{
+        td{
+            color:white;
+        }
+    }
+}   

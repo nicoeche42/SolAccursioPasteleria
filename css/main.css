@@ -314,12 +314,25 @@ section div {
   overflow: hidden;
   text-shadow: black 0.1em 0.1em 0.2em; }
   .card .btn-primary {
-    background-color: #ffccd2;
-    color: white; }
+    background-color: green;
+    color: white;
+    border-color: green; }
   .card .card-title {
     font-size: 2em; }
   .card .card-text {
     font-size: 1.6em; }
+
+.cards {
+  width: auto; }
+
+#carro {
+  max-width: 60%;
+  background-color: #582805;
+  color: white; }
+  #carro th {
+    color: white; }
+  #carro .table td {
+    color: white; }
 
 /* MEDIAS */
 /*PANTALLAS MEDIANAS*/
