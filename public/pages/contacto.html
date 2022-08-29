@@ -38,7 +38,7 @@
         </nav>
     </header>
     <main id="mainContacto">
-        <form class="formContacto form" action="https://formspree.io/f/xeqdovkr" method="POST">
+        <form class="formContacto form" action="https://formspree.io/f/xeqdovkr" method="POST" id="form">
             <div class="divContacto">
                 <label for="nombre">
                     <p>NOMBRE</p>
@@ -55,11 +55,11 @@
                 <label for="consulta">
                     <p>CONSULTA</p>
                 </label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="consulta" id="consulta"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="consulta" id="consulta"></textarea>
                 <p>Recibir informacion mediante</p>
-                <select name="" id="" class="margenesContacto">
-                    <option value="">Correo</option>
-                    <option value="">Whatssapp</option>
+                <select name="option" id="option" class="margenesContacto">
+                    <option value="mail">Correo</option>
+                    <option value="numero">Whatssapp</option>
                 </select>
                 <label for="checkbox">
                     <p>Deseo recibir noticias, ofertas y promociones de Sol Accursio Pasteleria</p>
